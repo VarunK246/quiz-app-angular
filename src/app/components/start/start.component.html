@@ -1,0 +1,38 @@
+<div>
+  <div class="full">
+    <div><h1 class="mat-display-4">Welcome to Mango Science Quiz</h1></div>
+    <div class="instruct">
+      <h1>Instructions</h1>
+
+      <div class="content">
+        <p class="mat-h2">
+          The test is <span class="video">video proctored</span> so complete the
+          test in a single stretch
+        </p>
+
+        <ul class="mat-body-strong">
+          <li>Allow access to webcam and mic</li>
+          <li>Take the test in a quiet environment</li>
+          <li>Do not move away from the test evironment</li>
+          <li>Do not indulge in any malpractice</li>
+        </ul>
+      </div>
+      <form [formGroup]="myForm" class="example-form">
+        <!-- Value : {{ myForm.value | json }} -->
+
+        <mat-form-field>
+          <input matInput placeholder="Name" formControlName="Name" />
+          <mat-error> Fill in the Name </mat-error>
+        </mat-form-field>
+      </form>
+      <button
+        mat-raised-button
+        class="start-test"
+        (click)="startQuiz()"
+        [disabled]="myForm.invalid"
+      >
+        Start Test
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+.heading {
+  display: flex;
+  margin-top: 10px;
+}
+
+:host {
+  background-color: rgba(178, 190, 106, 0.425);
+}
+
+.para {
+  display: flexbox;
+  margin-left: 200px;
+  margin-right: 200px;
+  font-size: 5mm;
+}
+.mat-display-4 {
+  font-weight: 500;
+}
+
+.mat-raised-button {
+  cursor: pointer;
+  padding: 50px;
+  border-radius: 75px;
+  color: white;
+  font-size: large;
+  background-color: yellowgreen;
+}
+
+.correct {
+  background-color: green;
+  color: white;
+}

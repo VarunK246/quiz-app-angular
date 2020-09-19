@@ -1,0 +1,22 @@
+.mat-card-title {
+  margin-left: 600px;
+}
+
+.mat-card-content {
+  margin-left: 500px;
+}
+
+.score {
+  margin-left: 600px;
+}
+
+.mark {
+  font-size: x-large;
+}
+
+.home {
+  margin-top: 200px;
+  margin-left: 630px;
+  padding: 50px;
+  border-radius: 74px;
+}

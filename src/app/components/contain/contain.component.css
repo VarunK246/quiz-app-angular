@@ -1,0 +1,45 @@
+.choices button {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  border-color: black;
+  border-width: 10px;
+}
+
+.choices button :hover {
+  cursor: pointer;
+  background-color: aqua;
+}
+
+.gradient {
+  position: absolute;
+}
+.content {
+  position: relative;
+}
+
+button {
+  padding: 20px;
+  width: 50%;
+}
+
+.correct {
+  display: flex;
+  background-color: rgb(56, 238, 56);
+  border-color: red;
+  border-radius: 15px;
+  padding: 20px;
+  font-size: 40px;
+  justify-content: center;
+}
+
+.wrong {
+  display: flex;
+  background-color: rgb(241, 89, 28);
+  border-radius: 15px;
+  padding: 20px;
+  font-size: 30px;
+  color: white;
+  justify-content: center;
+}

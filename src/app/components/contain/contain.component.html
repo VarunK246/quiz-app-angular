@@ -1,0 +1,79 @@
+<mat-card style="background-color: rgba(178, 190, 106, 0.425)">
+  <mat-card-header>
+    <div mat-card-avatar class="header-image"></div>
+    <div class="mat-card-container">
+      <mat-card-title style="margin-left: 500px"
+        >Mango Science Quiz</mat-card-title
+      >
+      <mat-card-subtitle style="margin-left: 550px">
+        All the best
+      </mat-card-subtitle>
+    </div>
+  </mat-card-header>
+  <mat-card style="background-color: rgba(139, 130, 77, 0.699)">
+    <mat-card>
+      <mat-card-content>
+        <h1 id="question" style="margin-left: 400px">
+          {{ quizArray[questionIndex].question }}
+        </h1>
+      </mat-card-content>
+    </mat-card>
+
+    <hr />
+    <div class="choices">
+      <div class="one-two">
+        <button mat-raised-button (click)="answerClick($event)">
+          {{ quizArray[questionIndex].choices[0] }}
+        </button>
+
+        <button mat-raised-button (click)="answerClick($event)">
+          {{ quizArray[questionIndex].choices[1] }}
+        </button>
+      </div>
+      <div class="three-four">
+        <button mat-raised-button (click)="answerClick($event)">
+          {{ quizArray[questionIndex].choices[2] }}
+        </button>
+        <button mat-raised-button (click)="answerClick($event)">
+          {{ quizArray[questionIndex].choices[3] }}
+        </button>
+      </div>
+    </div>
+    <!-- <mat-card class="options">
+      <div class="ansbutton" (click)="answerClick($event)">
+        {{ x }}
+      </div>
+    </mat-card> -->
+    <hr />
+    <button mat-raised-button (click)="nextQuestion()">Next</button>
+  </mat-card>
+  <mat-card *ngIf="isClickedVar">
+    <div class="correct" *ngIf="correctAnswer; else templateName">Correct</div>
+
+    <ng-template #templateName>
+      <mat-card class="wrong">
+        <p>
+          Wrong
+          <br />
+          <br />
+          Correct Answer:{{
+            quizArray[questionIndex].choices[
+              quizArray[questionIndex].answerIndex
+            ]
+          }}
+        </p>
+      </mat-card>
+    </ng-template>
+
+    <!-- {% comment %}
+    <h1 class="correct" *ngIf="isClicked() && correctAnswer">
+      Correct {{ this.nextQuestion() }}
+    </h1>
+
+    <h1 class="wrong" *ngIf="isClicked() && !correctAnswer">
+      Wrong
+      {{ this.nextQuestion() }}
+    </h1>
+    {% endcomment %} -->
+  </mat-card>
+</mat-card>
